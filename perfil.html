@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Mara Lucy Pets</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Luidy Baldez"/>
+        <meta name="author" content="Rayra Feitosa Alves"/>
+        <meta name="author" content="Sophia Laura Nunes Silva"/>
+		<meta name="keywords" content="Acessórios, cães, cachorros, pets, gatos, coleiras, peitorais, guias"/>
+		<meta name="description" content="Venda de acessórios para cães e gatos"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="estilo.css"/>
+	</head>
+    <body>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logomark" src="img/logomarca.png" alt="Logomarca da Mara Lucy Pets, imagem redonda com a foto de uma Yorkshire com fundo azul e borda amarela"/>
+                   
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está procurando?">
+                <a href="busca.html"><button></button></a>
+            </div>
+            <a href="perfil.html "> <div class="user">
+                <img src="img/perfil.png"/>
+                <p>Perfil</p>
+            </div> </a>
+            <div class="cart">
+                <a href="carrinho.html"><img src="img/carrinho.png"/></a>
+            </div>
+        </nav>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="">CÃES</a></li>
+                <li><a href="">GATOS</a></li>
+                <li><a href="">TODOS</a></li>
+            </ul>
+        </nav>
+        <main class="account-page">
+            <section>
+                <div class="containerp">  
+                    <h1>Minha Conta</h1>
+                    <div class="options">
+                        <a href="historico.html" class="box">
+                            <img src="img/iconepedidos.png"/>
+                            <p>Meus pedidos</p> 
+                        </a>
+                        <a href="suporte.html" class="box">
+                            <img src="img/iconesuporte.png"/>
+                            <p>Suporte ao cliente</p> 
+                        </a>
+                    </div>
+                </div>
+                <h2>Dados do Perfil</h2>
+            </section>
+            <form class="profile">
+                <div class="dados">
+                    <div class="form-groupp">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" value="Nome Sobrenome Cadastrados" required>
+                    </div>
+                    <div class="form-groupp">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" value="emailcadastrado@email.com" required>
+                    </div>
+                    <div class="form-groupp">
+                        <label for="cpf_cnpj">CPF/CNPJ:</label>
+                        <input type="text" id="cpf_cnpj" name="cpf_cnpj" value="000.000.000-00" required>
+                    </div>
+                    <div class="form-groupp">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" value="(00)00000000" required>
+                    </div>
+                    
+                    <p>Endereço padrão</p>
+                    <div class="form-endereço">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" pattern="[0-9]{8}" title="Informe um CEP válido (apenas números)">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" name="numero">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" id="complemento" name="complemento">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" name="bairro">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="form-endereço">
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado">
+                    </div>
+                    <h3>Formas de pagamento</h3>
+                    <div class="cards">
+                        <div class="card-data">
+                            <div class="card-data-top">
+                                <img class="card-brand" src="img/master.png"/>
+                                <p><a href="">Editar</a>
+                                <a href="">Excluir</a></p>
+                            </div>
+                            <div class="card-data-bottom">
+                                <p>Cartão de crédito</p>
+                                <p>**** 0001 | Válido até 01/01/2031</p>
+                                <p class="card-name">NOME NO CARTÃO</p>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <div class="card-data-top">
+                                <img class="card-brand" src="img/visa.png"/>
+                                <p><a href="">Editar</a>
+                                <a href="">Excluir</a></p>
+                            </div>
+                            <div class="card-data-bottom">
+                                <p>Cartão de crédito</p>
+                                <p>**** 0010 | Válido até 01/01/2031</p>
+                                <p class="card-name">NOME NO CARTÃO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-data">
+                            <img src="img/adicionar.png" alt="Sinal de adição"/>
+                            <p>Adicionar forma de pagamento</p>
+                        </div>
+                    </div>
+                    <div id="button">
+                        <button type="submit">Confirmar alterações</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h3>Sobre</h3>
+                    <p><a href="">Quem somos</a></p>
+                    <p><a href="suporte.html">Fale conosco</a></p>
+                </div>
+                <div class="services">
+                    <h3>Serviços</h3>
+                    <p><a href="">Venda para Petshops</a></p>
+                    <p><a href="">Entrega</a></p>
+                    <p><a href="">Troca e devolução</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Redes sociais</h3>
+                    <p class="social-media-logos">
+                        <a href="https://instagram.com/maralucypets" target="_blank"><img src="img/insta.png"/></a>
+                        <a href="#"><img src="img/wpp.png"/></a>
+                    </p>
+                </div>
+                <div class="company">
+                    <img src="img/logomarca.png" class="company-logomark"/>
+                    <p>CNPJ: 50.716.105/0001-10</p>
+                </div>
+            </div> 
+        </footer>
+    </body>
+</html>

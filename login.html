@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Mara Lucy Pets</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Luidy Baldez"/>
+        <meta name="author" content="Rayra Feitosa Alves"/>
+        <meta name="author" content="Sophia Laura Nunes Silva"/>
+		<meta name="keywords" content="Acessórios, cães, cachorros, pets, gatos, coleiras, peitorais, guias"/>
+		<meta name="description" content="Venda de acessórios para cães e gatos"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="estilo.css"/>
+	</head>
+    <body>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logomark" src="img/logomarca.png" alt="Logomarca da Mara Lucy Pets, imagem redonda com a foto de uma Yorkshire com fundo azul e borda amarela"/>
+                   
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está procurando?">
+                <a href="busca.html"><button></button></a>
+            </div>
+            <a href="login.html "> <div class="user">
+                <img src="img/perfil.png"/>
+                <p>Perfil</p>
+            </div> </a>
+            <div class="cart">
+                <a href="carrinho.html"><img src="img/carrinho.png"/></a>
+            </div>
+        </nav>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="">CÃES</a></li>
+                <li><a href="">GATOS</a></li>
+                <li><a href="">TODOS</a></li>
+            </ul>
+        </nav>
+        <!-- Adicionando formulário de login e criar conta -->
+<div class="login-container">
+    <form id="login-form" class="custom-form">
+        <h2>Faça o Login</h2>
+        <label for="username"></label>
+        <input type="text" placeholder="Usuario" id="username" name="username" required>
+        <label for="password"></label>
+        <input type="password" placeholder="Senha" id="password" name="password" required>
+        <div class="remember-forgot">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Lembrar senha</label>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div class="separator"></div>
+
+    <form id="signup-form" class="custom-form">
+        <h2>Crie sua Conta</h2>
+        <label for="newUsername"></label>
+        <input type="text" placeholder="Usuario" id="newUsername" name="newUsername" required>
+        <label for="newPassword"></label>
+        <input type="password" placeholder="Senha" id="newPassword" name="newPassword" required>
+        <label for="email"></label>
+        <input type="text" placeholder="Email" id="email" name="email" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+
+
+        <footer>
+            <div class="footer1">
+                <div class="about">
+                    <h3>Sobre</h3>
+                    <p><a href="">Quem somos</a></p>
+                    <p><a href="suporte.html">Fale conosco</a></p>
+                </div>
+                <div class="services">
+                    <h3>Serviços</h3>
+                    <p><a href="">Venda para Petshops</a></p>
+                    <p><a href="">Entrega</a></p>
+                    <p><a href="">Troca e devolução</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Redes sociais</h3>
+                    <p class="social-media-logos">
+                        <a href="https://instagram.com/maralucypets" target="_blank"><img src="img/insta.png"/></a>
+                        <a href=""><img src="img/wpp.png"/></a>
+                    </p>
+                </div>
+                <div class="company">
+                    <img src="img/logomarca.png" class="company-logomark"/>
+                    <img src="img/logotipo.png" class="company-logotype"/>
+                    <p>CNPJ: 50.716.105/0001-10</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const logomarca = document.getElementById('logomarca');
+            const logotipo = document.getElementById('logotipo');
+            const initialSizePercentage = 100;
+
+            function updateLogoSize() {
+                const finalSize = document.querySelector('.top-nav').offsetHeight;
+                const scrollY = window.scrollY;
+                const vw = window.innerWidth;
+                let bannerHeight = document.querySelector('.banner').offsetHeight;
+                let logomarcaHeight = parseFloat(logomarca.style.height);
+
+                let stopPoint = bannerHeight;
+                let scale = 1;
+
+                if (scrollY < stopPoint) {
+                    scale = scale - (scrollY / stopPoint);
+                }
+
+                scale = Math.max(scale, (450 / vw));
+
+                logomarca.style.width = `${initialSizePercentage * scale}%`;
+                logomarca.style.height = `${initialSizePercentage * scale}%`;
+
+                if (scrollY >= stopPoint) {
+                    logomarca.classList.add("scrolled");
+                    logomarca.style.top = '0';
+                } else {
+                    logomarca.classList.remove("scrolled");
+                    logomarca.style.top = `${stopPoint - scrollY}px`;
+                    logotipo.style.opacity = 0;
+                }
+
+                if (scrollY >= stopPoint) {
+                    logomarca.style.width = `${finalSize + 1}px`;
+                    logomarca.style.height = `${finalSize + 1}px`;
+                    logotipo.style.opacity = 1;
+                    logotipo.style.paddingLeft = `calc(${logomarca.style.height} + 9vw)`;
+                }
+
+            }
+
+            window.addEventListener('resize', updateLogoSize);
+            window.addEventListener('scroll', updateLogoSize);
+
+            updateLogoSize();
+        </script>
+
+    </body>

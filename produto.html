@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Mara Lucy Pets</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Luidy Baldez"/>
+        <meta name="author" content="Rayra Feitosa Alves"/>
+        <meta name="author" content="Sophia Laura Nunes Silva"/>
+		<meta name="keywords" content="Acessórios, cães, cachorros, pets, gatos, coleiras, peitorais, guias"/>
+		<meta name="description" content="Venda de acessórios para cães e gatos"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="estilo.css"/>
+	</head>
+    <body>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logomark" src="img/logomarca.png" alt="Logomarca da Mara Lucy Pets, imagem redonda com a foto de uma Yorkshire com fundo azul e borda amarela"/>
+                    
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está procurando?">
+                <a href="busca.html"><button></button></a>
+            </div>
+            <a href="perfil.html "> <div class="user">
+                <img src="img/perfil.png"/>
+                <p>Perfil</p>
+            </div> </a>
+            <div class="cart">
+                <a href="carrinho.html"><img src="img/carrinho.png"/></a>
+            </div>
+        </nav>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="">CÃES</a></li>
+                <li><a href="">GATOS</a></li>
+                <li><a href="">TODOS</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="product-details">
+                <div class="product-images">
+                    <div class="product-column" id="productColumn">
+                        <img src="img/produtos/pequeno1.png" alt="Peitoral Lilás" onclick="changeImage('img/produtos/pequeno1.png')">
+                        <img src="img/produtos/pequeno2.png" alt="Peitoral Rosa" onclick="changeImage('img/produtos/pequeno2.png')">
+                        <img src="img/produtos/medio1.png" alt="Peitoral Vermelho" onclick="changeImage('img/produtos/medio1.png')">
+                    </div>
+                    <div class="main-image" id="mainImage">
+                        <img src="img/produtos/pequeno1.png" alt="Imagem principal">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1>Peitoral Ajustável em X de Poliester com Guia</h1>
+                    <div class="stars-review">
+                        <img src="img/estrelas.png"/>
+                        (3 avaliações)
+                    </div>
+                    <p class="availability">Em estoque</p>
+                    <div class="product-size">
+                        <label for="tamanho">Tamanho:</label>
+                        <select id="tamanho" name="tamanho">
+                            <option value="">Selecione</option>
+                            <option value="pp">PP</option>
+                            <option value="p">P</option>
+                            <option value="m">M</option>
+                            <option value="pp">G</option>
+                            <option value="p">GG</option>
+                        </select>
+                    </div>
+                    <label for="cor">Cor:</label>
+                    <div class="product-color">
+                        <input type="radio" id="cor1" name="cor" checked>
+                        <label for="cor1">
+                            <img src="img/produtos/pequeno1.png" alt="Peitoral Lilás">
+                            <span>Lilás</span>
+                        </label>
+                        <input type="radio" id="cor2" name="cor">
+                        <label for="cor2">
+                            <img src="img/produtos/pequeno2.png" alt="Peitoral Rosa">
+                            <span>Rosa</span>
+                        </label>
+                        <input type="radio" id="cor3" name="cor">
+                        <label for="cor3">
+                            <img src="img/produtos/medio1.png" alt="Peitoral Vermelho">
+                            <span>Vermelho</span>
+                        </label>
+                    </div>
+                    <div class="price-details">
+                        <p>Por: </p>
+                        <h3>R$ 9,99</h3>
+                    </div>
+                    <div class="add-to-cart">
+                        <label for="quantidade">Quantidade: </label>
+                        <input type="number" id="quantidade" name="quantidade" value="1" min="1" max="10"  required>
+                        <a href="carrinho.html"><button class="cart-btn">Adicionar ao Carrinho</button></a>
+                    </div>
+                </div>
+            </section>
+            <section class="product-description">
+                <h2>Descrição</h2>
+                <p>Descrição do produto</p>
+                <h2>Especificações</h2>
+                <p>Porte do animal: Pequeno porte</p>
+                <p>Material: Poliester</p>
+                <div class="size-guide">
+                    <p>Guia de tamanhos: </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tamanho</th>
+                                <th>Circunferência</th>
+                                <th>Comprimento da guia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PP</td>
+                                <td>10cm a 20cm</td>
+                                <td>1m</td>
+                            </tr>
+                            <tr>
+                                <td>P</td>
+                                <td>13cm a 23cm</td>
+                                <td>1m</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>16cm a 26cm</td>
+                                <td>1m</td>
+                            </tr>
+                            <tr>
+                                <td>G</td>
+                                <td>19cm a 29cm</td>
+                                <td>1m</td>
+                            </tr>
+                            <tr>
+                                <td>GG</td>
+                                <td>22cm a 32cm</td>
+                                <td>1m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>Avaliações de clientes</h2>
+                <div class="customer-review">
+                    <p class="client-name">Por: Nome do Cliente</p>
+                    <div class="customer-review-stars">
+                        <img src="img/estrelas.png"/>
+                        <p>01/01/2023</p>
+                    </div>
+                    Texto da avaliação do cliente
+                </div>
+                <div class="customer-review">
+                    <p class="client-name">Por: Nome do Cliente</p>
+                    <div class="customer-review-stars">
+                        <img src="img/estrelas.png"/>
+                        <p>01/01/2023</p>
+                    </div>
+                    Texto da avaliação do cliente
+                </div>
+                <div class="customer-review">
+                    <p class="client-name">Por: Nome do Cliente</p>
+                    <div class="customer-review-stars">
+                        <img src="img/estrelas.png"/>
+                        <p>01/01/2023</p>
+                    </div>
+                    Texto da avaliação do cliente
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="about">
+                    <h3>Sobre</h3>
+                    <p><a href="">Quem somos</a></p>
+                    <p><a href="suporte.html">Fale conosco</a></p>
+                </div>
+                <div class="services">
+                    <h3>Serviços</h3>
+                    <p><a href="">Venda para Petshops</a></p>
+                    <p><a href="">Entrega</a></p>
+                    <p><a href="">Troca e devolução</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Redes sociais</h3>
+                    <p class="social-media-logos">
+                        <a href="https://instagram.com/maralucypets" target="_blank"><img src="img/insta.png"/></a>
+                        <a href=""><img src="img/wpp.png"/></a>
+                    </p>
+                </div>
+                <div class="company">
+                    <img src="img/logomarca.png" class="company-logomark"/>
+                    <p>CNPJ: 50.716.105/0001-10</p>
+                </div>
+            </div> 
+        </footer>
+
+        <script>
+            function changeImage(newSrc) {
+                document.getElementById('mainImage').innerHTML = `<img src="${newSrc}" alt="Imagem principal">`;
+            }
+        </script>
+    </body>
+</html>
